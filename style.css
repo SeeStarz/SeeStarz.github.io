@@ -1,0 +1,46 @@
+:root {
+  --image-size: 300px;
+}
+
+.About {
+  display: flex;
+}
+
+.column {
+  flex: auto;
+}
+
+.column.picture {
+  padding: 10px 30px;
+  background-color: red;
+}
+
+.column.text {
+  padding: 10px 0px;
+  background-color: pink;
+}
+
+.wrap {
+  width: var(--image-size);
+  height: var(--image-size);
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column: 1;
+}
+
+#photo {
+  width: var(--image-size);
+  height: auto;
+  margin-top: calc(var(--image-size) * -0.5);
+  margin-left: calc(var(--image-size) * -0.05);
+  scale: 2;
+}
+
+#arch {
+  width: var(--image-size);
+  height: calc(var(--image-size) * 0.3);
+  object-fit: cover;
+}
