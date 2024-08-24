@@ -44,3 +44,24 @@
   height: calc(var(--image-size) * 0.3);
   object-fit: cover;
 }
+
+footer {
+  position: fixed;
+  width: calc(100% - 20px);
+  text-align: center;
+  left: 0px;
+  bottom: 0px;
+  padding: 10px;
+  background-color: cyan;
+}
+
+footer>.icons {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: red;
+}
+
+footer>.icons>a {
+  margin: 0px 5px;
+}
