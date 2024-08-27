@@ -1,5 +1,11 @@
 :root {
   --image-size: 300px;
+  --footer-height: 100px;
+}
+
+div.body {
+  margin-bottom: var(--footer-height);
+  background-color: lightgray;
 }
 
 .About {
@@ -41,22 +47,24 @@
 }
 
 .right .bottom {
-  display: table;
+  display: inline-block;
+  white-space: nowrap;
+  height: 100px;
   background-color: gray;
 }
 
 .right span {
-  display: table-cell;
-  vertical-align: middle;
+  position: relative;
+  top: 13px;
+  /*vertical-align: middle;*/
   background-color: cyan;
   font-size: 50px;
 }
 
 #arch {
-  display: table-cell;
   vertical-align: middle;
-  width: var(--image-size);
-  height: calc(var(--image-size) * 0.3);
+  /*width: var(--image-size);*/
+  /*height: calc(var(--image-size) * 0.3);*/
   object-fit: cover;
   background-color: lime;
 }
@@ -64,6 +72,7 @@
 footer {
   position: fixed;
   width: calc(100% - 20px);
+  height: var(--footer-height);
   text-align: center;
   left: 0px;
   bottom: 0px;
@@ -74,7 +83,6 @@ footer {
 footer>.icons {
   display: flex;
   justify-content: center;
-  margin: auto;
   background-color: red;
 }
 
