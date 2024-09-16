@@ -56,7 +56,7 @@
           At first i only tinkered around with C++ and Java but didn't get far.
           After some guided sessions about python and some bunch of small tinkering porjects,
           everything starts to make sense. Though there are countless python libraries,
-          I am confident in my python fundamentals at the very least.</p>
+          I am confident in my python fundamentals.</p>
       </div>
       <div class="Box">
         <h3>Pygame</h3>
@@ -124,33 +124,75 @@
       </div>
     </section>
 
+    <h2>My Projects</h2>
     <section class="Projects">
-      <h2>My Projects</h2>
+      <div class="Box">
+        <h3>Sovereign Chess</h3>
+        <img src="asset/chess.png" height=200>
+        <p>This is a desktop game made in C++ with SFML library for the chess variant
+          "Sovereign Chess" by Mark Bates.
+          My biggest and proudest project so far.
+          All of the logic are written by me in C++, complete with
+          it's own button event system.
+          The only library used is SFML to deal with graphics,
+          audio, windowing, user input, and TCP requests.
+          This project taught me a lot about C++ and it's dangling pointers.
+          Once i was stuck for hours debugging just to realize that
+          extending a vector changes it's location in memory,
+          rendering all pointers to it's members dangling.
+          This project also taught me about C++'s build system.
+          And yes, it is a big mess.
+          I used vscode's manual compile script at the beginning and later
+          created my own script for MinGW Make and GnuMake.
+          By adding linux ports I also have a bit more awareness
+          about the different build systems there is.
+          And the fact that different compilers really don't
+          want to agree on some things sometimes.</p>
+        <a href="https://github.com/SeeStarz/SovereignChess">source</a>
+        <a href="https://github.com/SeeStarz/SovereignChess/releases">download</a>
+        <a href="https://www.infinitepigames.com/sovereign-chess">sovereign chess</a>
+      </div>
 
-      <h3>Sovereign Chess</h3>
-      <p>A desktop game made in SFML for the chess variant "Sovereign Chess" by Mark Bates. My biggest and proudest
-        project so far.</p>
-      <img src="asset/chess.png" height=200>
-      <br />
-      <a href="https://github.com/SeeStarz/SovereignChess">link</a>
+      <div class="Box">
+        <h3>Minecraft Mods</h3>
+        <img src="asset/netherite_bow.png" height=200>
+        <p>I published two minecraft mods.
+          Strong Netherite Bow Mod,
+          a minecraft mod adding a new bow made of netherite that is stronger,
+          but also unique by prolonging it's charge duration.
+          Originally meant for elytra fights midair.
+          All stats are configurable via a config file.
+          The bow mod is then complemented by Fast Projectile Fix Mod to fix rendering issue.
+          Both mods are developed for Minecraft forge version 1.16.5.
+          How the mod is created is pretty straight forward,
+          by following some youtube tutorial and mimicking some of
+          Minecraft's original code, it is possible to add a completely
+          new bow that's compatible with the original.
+          There are some areas of code that doesn't make sense why it is,
+          but that is how it works.
+          There are also some areas where it's needed to hook with
+          Minecraft's event handling system, notably the FOV change.
+          Lastly any projectile above a certain speed will render absolutely incorrect,
+          despite having a correct trajectory and destination.
+          This happened due to Minecraft clamping values between -4 and 4.
+          To fix this Fast Projectile Fix was deployed separately to override
+          these mechanics and instead send a proper double type value.
+        </p>
+        <a href="https://www.curseforge.com/minecraft/mc-mods/strong-netherite-bow">bow mod download</a>
+        <a href="https://github.com/SeeStarz/NetheriteBowMod">bow mod source</a>
+        <br />
+        <a href="https://www.curesforge.com/minecraft/mc-mods/fast-projectile-fix">fix mod download</a>
+        <a href="https://github.com/SeeStarz/FastProjectileFix">fix mod source</a>
+      </div>
 
-      <h3>Minecraft Strong Netherite Bow Mod</h3>
-      <p>A minecraft mod adding a new bow made of netherite that is stronger, but also unique by prolonging it's charge
-        duration. Originally meant for elytra fights midair. Complemented by Fast Projectile Fix Mod to fix rendering
-        issue
-      </p>
-      <img src="asset/netherite_bow.png" height=200>
-      <br />
-      <a href="https://www.curseforge.com/minecraft/mc-mods/strong-netherite-bow">curseforge</a>
-      <a href="https://github.com/SeeStarz/NetheriteBowMod">github repo</a>
-
-      <h3>Minecraft Fast Projectile Fix Mod</h3>
-      <p>A minecraft mod to fix rendering issue of entities at high velocity. Developed as a bugfix for Strong
-        Netherite
-        Bow
-        Mod</p>
-      <a href="https://www.curesforge.com/minecraft/mc-mods/fast-projectile-fix">curseforge</a>
-      <a href="https://github.com/SeeStarz/FastProjectileFix">github repo</a>
+      <div class="Box">
+        <h3>This Website</h3>
+        <img src="asset/web.png" height=200>
+        <p>I initially made a rough sketch of this website as an optional
+          campus assignment. Built on top of pure html and css, and soon js,
+          this website will be the entry point for all of my projects.</p>
+        <a href="https://seestarz.github.io">here</a>
+      </div>
     </section>
   </div>
 
