@@ -10,8 +10,19 @@ div.body {
 
 .About {
   display: flex;
+  justify-content: center;
+  /*animation: anjay 100ms infinite;*/
 }
 
+@keyframes anjay {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .left {
   padding: 10px 30px;
@@ -43,6 +54,7 @@ div.body {
 }
 
 .right .top {
+  width: 500px;
   background-color: lightgray;
 }
 
@@ -59,6 +71,21 @@ div.body {
   /*vertical-align: middle;*/
   background-color: cyan;
   font-size: 50px;
+}
+
+.Skills {
+  background-color: magenta;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.Box {
+  width: 300px;
+  padding: 10px;
+  flex-grow: 1;
+  background-color: tomato;
 }
 
 #arch {
