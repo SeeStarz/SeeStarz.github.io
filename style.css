@@ -3,12 +3,17 @@
   --footer-height: 150px;
 }
 
-div.body {
+.jsonly {
+  display: none;
+  visibility: hidden;
+}
+
+div#body {
   margin-bottom: var(--footer-height);
   background-color: lightgray;
 }
 
-.About {
+#About {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -69,15 +74,15 @@ div.body {
   background-color: lime;
 }
 
-.Skills {
-  background-color: magenta;
+.Flex {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px;
+  background-color: aquamarine;
 }
 
-.Skills>.Box {
+#Skills .Box {
   width: 300px;
   padding: 16px;
 }
@@ -100,21 +105,28 @@ h2 {
   padding: 10px;
 }
 
-.Projects {
-  display: grid;
-  grid-template-columns: repeat(3, 100%);
-  background-color: magenta;
-  gap: 30px;
-  margin: 10px;
-  overflow: scroll;
+#projectleft {
+  order: -1;
+  flex-basis: 10%;
+  flex-shrink: 0;
 }
 
-.Projects>.Box {
-  grid-column: span 1;
-  padding: 10px;
+#projectright {
+  order: 1;
+  flex-basis: 10%;
+  flex-shrink: 0;
 }
 
-.Projects img {
+#Projects .Flex {
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+
+#Projects .Box {
+  min-width: 100%;
+}
+
+#Projects img {
   width: 400px;
   height: auto;
   float: left;
