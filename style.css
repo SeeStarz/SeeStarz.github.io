@@ -151,6 +151,7 @@ footer {
 footer>.icons {
   display: flex;
   background-color: red;
+  justify-content: center;
 }
 
 footer>.icons>a {
